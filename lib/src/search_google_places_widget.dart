@@ -97,6 +97,15 @@ class _SearchMapPlaceWidgetState extends State<SearchGooglePlacesWidget>
 
   CrossFadeState? _crossFadeState;
 
+   @override
+  void setState(VoidCallback fn) {
+    if (!mounted) {
+      return;
+    }
+
+    super.setState(fn);
+  }
+  
   @override
   void initState() {
     geocode = Geocoding(apiKey: widget.apiKey, language: widget.language);
