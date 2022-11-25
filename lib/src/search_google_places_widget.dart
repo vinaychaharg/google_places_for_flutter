@@ -195,6 +195,7 @@ class _SearchMapPlaceWidgetState extends State<SearchGooglePlacesWidget>
               onSubmitted: (_) => _selectPlace(),
               onEditingComplete: _selectPlace,
               autofocus: false,
+              autocorrect: false,
               focusNode: _fn,
               style: TextStyle(
                 fontSize: MediaQuery.of(context).size.width * 0.04,
